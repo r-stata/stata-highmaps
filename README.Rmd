@@ -50,7 +50,7 @@ spmap value using europe_coord, id(ID) ///
 gr export "europe.png", replace
 ```
 
-![](https://mdniceczx.oss-cn-beijing.aliyuncs.com/image_20201128192353.png)
+![](https://mdniceczx.oss-cn-beijing.aliyuncs.com/image_20201124114414.png)
 
 ## 下载数据
 
@@ -62,7 +62,7 @@ dir_ls('code-data-zip') %>%
   str_remove("code-data-zip/") %>% 
   str_remove(".zip") %>% 
   as_tibble() %>% 
-  mutate(下载链接 = paste0("https://czxa.github.io/stata-highmaps/code-data-zip/", value, ".zip")) %>% 
+  mutate(下载链接 = paste0("https://r-stata.github.io/stata-highmaps/code-data-zip/", value, ".zip")) %>% 
   mutate(下载链接 = paste0("<a href='", 下载链接, "'>", value, "</a>")) %>% 
   rename(`国家/地区` = value) %>% 
   knitr::kable()
